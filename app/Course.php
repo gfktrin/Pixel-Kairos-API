@@ -10,4 +10,12 @@ class Course extends Model
         'id',
         'name',
     ];
+
+    public function modules(){
+        return $this->hasMany(Module::class);
+    }
+
+    public function users(){
+        return $this->belongsToMany(User::class);
+    }
 }

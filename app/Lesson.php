@@ -11,4 +11,8 @@ class Lesson extends Model
         'name',
         'link',
     ];
+
+    public function module(){
+        return $this->belongsTo(Module::class);
+    }
 }

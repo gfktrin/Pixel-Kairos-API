@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateModulesTable extends Migration
+class CreateUsersCoursesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateModulesTable extends Migration
      */
     public function up()
     {
-        Schema::create('modules', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-            $table->string('name');
+        Schema::create('users_courses', function (Blueprint $table) {
+            $table->integer('user_id')->unsigned();
             $table->integer('course_id')->unsigned();
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('cascade');
 
             $table->foreign('course_id')
                 ->references('id')->on('courses')
@@ -32,6 +34,6 @@ class CreateModulesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('modules');
+        Schema::dropIfExists('users_courses');
     }
 }

@@ -18,6 +18,11 @@ class CreateLessonsTable extends Migration
             $table->timestamps();
             $table->string('name');
             $table->string('link');
+            $table->integer('module_id')->unsigned();
+
+            $table->foreign('module_id')
+                ->references('id')->on('modules')
+                ->onDelete('cascade');
         });
     }
 

@@ -12,4 +12,16 @@ class CoursesController extends Controller
         $courses = Course::all();
         return response()->json($courses);
     }
+
+    public function show($id) {
+        $course = Course::find($id);
+
+        if(!$course) {
+            return response()->json([
+                'message' => 'Record not found',
+            ], 404);
+        }
+
+        return response()->json($course);
+    }
 }

@@ -14,7 +14,7 @@ class AddCardImgToCourses extends Migration
     public function up()
     {
         Schema::table('courses', function (Blueprint $table) {
-            $table->string('card_img');
+            $table->string('card_img')->nullable();
         });
     }
 

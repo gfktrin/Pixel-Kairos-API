@@ -15,3 +15,5 @@ Por enquanto, o projeto se baseia no seguinte modelo de classes:
 6. Copie os arquivos da pasta public que está dentro do projeto para a pasta `api.pixelkairos.com.br` no Hostgator.
 7. Substitua o `server.php` da pasta `pixelKairos` do Hostgator pela cópia alterada.
 8. Substitua o `index.php` da pasta `api.pixelkairos.com.br` do Hostgator pela cópia alterada.
+
+O arquivo `.env` também deve ser editado com as credenciais usadas pelo banco de dados do Hostgator.

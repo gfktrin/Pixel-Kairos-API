@@ -8,6 +8,12 @@ use App\Course;
 
 class CoursesController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['index', 'show']]);
+    }
+
     public function index() {
         $courses = Course::all();
         return response()->json($courses);

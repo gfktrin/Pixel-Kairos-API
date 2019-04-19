@@ -11,7 +11,8 @@ class Course extends Model
         'name',
         'slug',
         'description',
-        'card_img'
+        'card_img',
+        'landing',
     ];
 
     public function modules(){

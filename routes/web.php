@@ -11,16 +11,6 @@
 |
 */
 
-
-
-Route::get('/', function () {
-    return response()->json(['message' => 'Pixel Kairos API', 'status' => 'Connected']);;
-});
-
-Route::resource('courses', 'CoursesController');
-Route::resource('users', 'UsersController');
-
-
 Route::get('/painel', function () {
     return view('welcome');
 });

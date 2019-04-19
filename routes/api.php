@@ -13,6 +13,17 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::get('/', function () {
+    return response()->json(['message' => 'Pixel Kairos API', 'status' => 'Connected']);;
+});
+
+Route::resource('courses', 'CoursesController');
+Route::resource('users', 'UsersController');
+
+Route::post('/register', 'AuthController@register');
+Route::post('/login', 'AuthController@login');
+Route::post('/logout', 'AuthController@logout');
+
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });

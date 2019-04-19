@@ -32,4 +32,19 @@ class CoursesController extends Controller
 
         return response()->json($course, 201);
     }
+
+    public function update(Request $request, $id) {
+        $course = Course::find($id);
+
+        if(!$course) {
+            return response()->json([
+                'message'   => 'Record not found',
+            ], 404);
+        }
+
+        $course->fill($request->all());
+        $course->save();
+
+        return response()->json($course);
+    }
 }

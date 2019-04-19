@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::resource('courses', 'CoursesController');
-//   Route::resource('companies', 'CompaniesController');
+Route::resource('users', 'UsersController');
 
 
 Route::get('/painel', function () {

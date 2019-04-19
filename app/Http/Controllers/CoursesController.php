@@ -24,4 +24,12 @@ class CoursesController extends Controller
 
         return response()->json($course);
     }
+
+    public function store(Request $request) {
+        $course = new Course();
+        $course->fill($request->all());
+        $course->save();
+
+        return response()->json($course, 201);
+    }
 }

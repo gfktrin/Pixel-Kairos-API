@@ -6,6 +6,10 @@ Por enquanto, o projeto se baseia no seguinte modelo de classes:
 
 ![alt text](https://i.imgur.com/IoZcwYT.png)
 
+## Repositório de imagens do site
+https://pixelkairos.imgur.com/all
+
+
 ## Procedimento de upload no Hostgator
 1. Toda a pasta local do projeto deve ser zipada e upada na pasta raíz do Hostgator. 
 2. Por meio do gerenciador de arquivos do cpanel, localize o zip e extraia dentro da pasta `pixelKairos`, que também se encontra na raíz.

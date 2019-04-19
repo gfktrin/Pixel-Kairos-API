@@ -15,6 +15,7 @@ class UserSeeder extends Seeder
             'name' => 'Tester',
             'email' => 'tester@pixelkairos.com.br',
             'password' => bcrypt('teste123'),
+            'role' => 'admin',
         ]);
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\CourseResource;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Course;
@@ -15,8 +16,7 @@ class CoursesController extends Controller
     }
 
     public function index() {
-        $courses = Course::all();
-        return response()->json($courses);
+        return CourseResource::collection(Course::all());
     }
 
     public function show($id) {
@@ -28,7 +28,7 @@ class CoursesController extends Controller
             ], 404);
         }
 
-        return response()->json($course);
+        return new CourseResource($course);
     }
 
     public function store(Request $request) {

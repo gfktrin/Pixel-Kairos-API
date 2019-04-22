@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\UserResource;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class UsersController extends Controller
             ], 404);
         }
 
-        return response()->json($user);
+        return new UserResource($user);
     }
 
     public function store(Request $request) {

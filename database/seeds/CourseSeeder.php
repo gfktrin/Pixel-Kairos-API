@@ -15,6 +15,7 @@ class CourseSeeder extends Seeder
             'name' => 'Desenvolvimento de games',
             'slug' => 'desenvolvimento-de-games',
             'description' => 'Já sonhou em criar seu proprio jogo? Com esse curso, você vai aprender a criar jogos de diferentes tipos com várias ferramentas, de forma que qualquer um possa tirar seu projeto do papel.',
+            'card_img' => 'https://i.imgur.com/V7CYMwP.png',
         ]);
     }
 }

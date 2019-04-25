@@ -58,7 +58,7 @@ class AuthController extends Controller
             'expires_in'   => auth()->factory()->getTTL() * 60,
             'id' => $user->id,
             'name' => $user->name,
-            'courses' => $user->courses,
+            'courses' => $user->coursesWithTree(),
         ]);
     }
 }

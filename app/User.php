@@ -44,7 +44,6 @@ class User extends Authenticatable implements JWTSubject
     }
 
     public function coursesWithTree() {
-       return Course::with('modules.lessons')->find($this->id);
-
+        return $this->courses()->with('modules.lessons')->get();
     }
 }
